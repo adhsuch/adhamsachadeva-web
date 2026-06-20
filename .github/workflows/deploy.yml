@@ -1,0 +1,60 @@
+# ============================================================
+#  CI/CD PIPELINE — deploy otomatis ke GitHub Pages
+#  Setiap kali ada "git push" ke branch main, workflow ini
+#  berjalan otomatis: install -> build -> deploy.
+#  Inilah yang membuat "push ke GitHub" otomatis mengubah website.
+# ============================================================
+name: Deploy portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main] # jalan otomatis setiap push ke branch main
+  workflow_dispatch: # bisa juga dijalankan manual dari tab Actions
+
+# Izin yang dibutuhkan agar workflow boleh men-deploy ke Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Hanya satu deployment yang berjalan dalam satu waktu
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  # --- TAHAP 1: BUILD (Continuous Integration) ---
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kode
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website (Vite)
+        run: npm run build
+
+      - name: Upload hasil build (folder dist)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  # --- TAHAP 2: DEPLOY (Continuous Deployment) ---
+  deploy:
+    needs: build # tunggu tahap build selesai dulu
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy ke GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
