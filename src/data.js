@@ -80,6 +80,20 @@ export const projects = [
     tags: ['Java', 'JavaFX', 'MySQL'],
     link: 'https://github.com/tyawaa/IF2050-2026-K02-G03-Nasi-Bergizi-Pajak',
   },
+  {
+    name: 'Image Watermarking',
+    description:
+      'A Python tool that embeds binary watermarks into photos using block-level DCT (8×8), then tests how well the mark survives JPEG compression across different quality factors.',
+    tags: ['Python', 'DCT', 'Image Processing'],
+    link: 'https://github.com/adhsuch/watermarking',
+  },
+  {
+    name: 'Personal Portfolio',
+    description:
+      "The site you're looking at — a single-page portfolio built with React + Vite and plain CSS, auto-deployed to GitHub Pages via a GitHub Actions CI/CD pipeline on every push.",
+    tags: ['React', 'Vite', 'CI/CD'],
+    link: 'https://github.com/adhsuch/adhamsachadeva-web',
+  },
 ]
 
 export const organizations = [
