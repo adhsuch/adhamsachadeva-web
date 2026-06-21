@@ -71,7 +71,7 @@ export const projects = [
     description:
       'A freelance platform built specifically for students, connecting task posters with students offering their services.',
     tags: ['Web', 'FastAPI', 'Platform'],
-    link: '',
+    link: 'https://github.com/andreas916/tubes-tekplat-CIVITASK',
   },
   {
     name: 'Nasi Bergizi Pajak',
