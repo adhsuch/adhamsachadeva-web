@@ -1,11 +1,12 @@
 import { projects } from '../data.js'
 import SectionLabel from './SectionLabel.jsx'
 import Reveal from './Reveal.jsx'
+import { ArrowUpRight } from './icons.jsx'
 
 export default function Projects() {
   return (
     <section id="projects" className="section">
-      <SectionLabel index="04">Proyek</SectionLabel>
+      <SectionLabel index="04">Projects</SectionLabel>
       <div className="projects__grid">
         {projects.map((p, i) => {
           const Wrapper = p.link ? 'a' : 'div'
@@ -19,7 +20,7 @@ export default function Projects() {
                   <span className="project__num mono">
                     0{i + 1}
                   </span>
-                  {p.link && <span className="project__arrow">↗</span>}
+                  {p.link && <ArrowUpRight className="project__arrow" />}
                 </div>
                 <h3 className="project__name">{p.name}</h3>
                 <p className="project__desc">{p.description}</p>

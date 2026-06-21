@@ -1,27 +1,31 @@
-// Semua konten portofolio dikumpulkan di sini agar mudah diubah.
+// All portfolio content lives here so it is easy to edit.
 
 export const profile = {
   name: 'Adham Sachadeva Purwadi',
-  role: 'Mahasiswa Institut Teknologi Bandung',
-  detail: 'Sistem dan Teknologi Informasi · Semester 4',
+  role: 'Student at Institut Teknologi Bandung',
+  detail: 'Information Systems & Technology · 4th Semester',
   tagline:
-    'Mahasiswa Sistem dan Teknologi Informasi yang menyukai pemrograman, pengembangan produk, dan eksplorasi AI / prompt engineering.',
-  // Foto profil ada di public/profile.jpg
+    'An Information Systems & Technology student who loves programming, product development, and exploring AI / prompt engineering.',
+  // Profile photo lives in public/profile.jpg
   photo: './profile.jpg',
 }
 
 export const about = [
-  'Saya Adham Sachadeva Purwadi, mahasiswa Sistem dan Teknologi Informasi di Institut Teknologi Bandung. Saya tertarik membangun perangkat lunak yang berguna — mulai dari algoritma, aplikasi desktop, hingga platform web.',
-  'Selain ngoding, saya aktif berorganisasi di kampus dan senang belajar hal baru, terutama pemanfaatan AI dan prompt engineering untuk menyelesaikan masalah nyata.',
+  "I'm Adham Sachadeva Purwadi, an Information Systems & Technology student at Institut Teknologi Bandung. I enjoy building useful software — from algorithms and desktop apps to web platforms.",
+  'Beyond coding, I am active in campus organizations and love learning new things — especially applying AI and prompt engineering to solve real problems.',
 ]
 
 export const skills = [
   {
-    category: 'Programming',
-    items: ['C', 'Java', 'Python', 'React'],
+    category: 'Languages',
+    items: ['C', 'Java', 'Python'],
   },
   {
-    category: 'Database',
+    category: 'Frameworks & Libraries',
+    items: ['React', 'JavaFX', 'FastAPI', 'NumPy', 'pandas', 'Matplotlib'],
+  },
+  {
+    category: 'Databases',
     items: ['MySQL', 'PostgreSQL'],
   },
   {
@@ -33,66 +37,69 @@ export const skills = [
 export const education = [
   {
     school: 'Institut Teknologi Bandung',
-    detail: 'Sistem dan Teknologi Informasi · Semester 4',
-    period: 'Sekarang',
+    detail: 'Information Systems & Technology · 4th Semester',
+    period: 'Present',
     current: true,
   },
   {
     school: 'MAN 2 Kota Malang',
-    detail: 'Madrasah Aliyah Negeri',
+    detail: 'Senior High School',
     period: '',
   },
   {
     school: 'SMPI Baitul Izzah Nganjuk',
-    detail: 'Sekolah Menengah Pertama Islam',
+    detail: 'Islamic Junior High School',
     period: '',
   },
   {
     school: 'SD Aisyiyah 1 Nganjuk',
-    detail: 'Sekolah Dasar',
+    detail: 'Elementary School',
     period: '',
   },
 ]
 
 export const projects = [
   {
-    name: 'Tubes Algoritma Pemrograman',
+    name: 'For Deeper',
     description:
-      'Tugas Besar Algoritma Pemrograman 1 — implementasi program berbasis bahasa C.',
-    tags: ['C', 'Algoritma'],
+      'A simple browser-style program written in C, built to carry the interactive narrative of our Algorithm & Programming 1 major project.',
+    tags: ['C', 'Makefile'],
     link: 'https://github.com/adhsuch/Tubes-Algoritma-Pemrograman-1-2026',
   },
   {
     name: 'CIVITASK',
     description:
-      'Platform freelancer khusus mahasiswa untuk menghubungkan pemberi tugas dengan mahasiswa yang menawarkan jasa.',
-    tags: ['Web', 'Platform'],
+      'A freelance platform built specifically for students, connecting task posters with students offering their services.',
+    tags: ['Web', 'FastAPI', 'Platform'],
     link: '',
   },
   {
-    name: 'Weekly Calories & Shopping Planner',
+    name: 'Nasi Bergizi Pajak',
     description:
-      'Aplikasi Windows untuk merencanakan kebutuhan kalori mingguan sekaligus daftar belanja.',
-    tags: ['Windows App', 'Desktop'],
-    link: '',
+      'A JavaFX desktop app that helps families plan healthier, more budget-friendly meals — family profiles, food budgeting, kitchen inventory, and weekly menus. I built the Budget & Shopping Planner module.',
+    tags: ['Java', 'JavaFX', 'MySQL'],
+    link: 'https://github.com/tyawaa/IF2050-2026-K02-G03-Nasi-Bergizi-Pajak',
   },
 ]
 
 export const organizations = [
   {
-    role: 'Staff Divisi Career Development',
+    role: 'Career Development Staff',
     org: 'HMIF ITB',
     period: '2026 / 2027',
+    desc: 'Supporting members’ career readiness — curating internship and job opportunities, building industry connections, and helping run career-prep events such as company sessions, CV and interview workshops, and sharing sessions with alumni and professionals.',
   },
   {
-    role: 'Divisi Sponsorship',
-    org: 'Wisuda HMIF',
+    role: 'Sponsorship Division',
+    org: 'Wisuda Oktober HMIF',
     period: '2025',
+    desc: 'Managed a database of 50+ potential sponsors and coordinated strategic outreach to corporate partners and startups for the graduation event.',
   },
   {
-    role: 'Staff Logistik',
+    role: 'Logistics Staff',
     org: 'IMPACT STEI-K',
     period: '2025',
+    desc: "Managed the equipment and supplies needed throughout the IMPACT competition's operations, and arranged the gala dinner layout for the winners.",
   },
 ]
 
@@ -103,7 +110,7 @@ export const contacts = [
   { label: 'GitHub', value: 'github.com/adhsuch', href: 'https://github.com/adhsuch' },
   {
     label: 'LinkedIn',
-    value: 'in/adhamsachadevap',
-    href: 'https://www.linkedin.com/in/adhamsachadevap/',
+    value: 'in/adham-sachadeva-purwadi',
+    href: 'https://www.linkedin.com/in/adham-sachadeva-purwadi/',
   },
 ]

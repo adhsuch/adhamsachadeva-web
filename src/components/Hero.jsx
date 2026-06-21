@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { profile } from '../data.js'
+import { Terminal } from './icons.jsx'
 
 export default function Hero() {
   // Jika foto gagal dimuat, tampilkan fallback.
@@ -10,7 +11,7 @@ export default function Hero() {
       <div className="hero__grid">
         <div className="hero__content">
           <p className="hero__hello mono">
-            <span className="accent">$</span> hello, saya
+            <Terminal className="hero__hello-icon" /> hello, I'm
           </p>
           <h1 className="hero__name">{profile.name}</h1>
           <p className="hero__role">
@@ -19,12 +20,17 @@ export default function Hero() {
           </p>
           <p className="hero__tagline">{profile.tagline}</p>
 
+          <p className="hero__status">
+            <span className="hero__status-dot" aria-hidden="true" />
+            Open to internships &amp; collaboration
+          </p>
+
           <div className="hero__actions">
             <a href="#contact" className="btn btn--primary">
-              Hubungi saya
+              Get in touch
             </a>
             <a href="#projects" className="btn btn--ghost">
-              Lihat proyek
+              View projects
             </a>
           </div>
         </div>
@@ -41,7 +47,7 @@ export default function Hero() {
             ) : (
               <div className="hero__photo-fallback mono">
                 <span>ASP</span>
-                <small>foto belum ditambahkan</small>
+                <small>photo not added</small>
               </div>
             )}
           </div>

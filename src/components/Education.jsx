@@ -5,7 +5,7 @@ import Reveal from './Reveal.jsx'
 export default function Education() {
   return (
     <section id="education" className="section">
-      <SectionLabel index="03">Riwayat Pendidikan</SectionLabel>
+      <SectionLabel index="03">Education</SectionLabel>
       <div className="timeline">
         {education.map((e, i) => (
           <Reveal key={e.school} delay={i * 90} className="timeline__item">
