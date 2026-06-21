@@ -45,8 +45,8 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="nav__inner">
         <a href="#top" className="nav__brand" onClick={() => setOpen(false)}>
-          <span className="nav__brand-mark">A</span>
-          <span className="nav__brand-text">adham<span className="accent">.</span></span>
+          <span className="nav__brand-mark">S</span>
+          <span className="nav__brand-text">saka<span className="accent">.</span></span>
         </a>
 
         <button
